@@ -1,0 +1,42 @@
+### retrieve all people
+GET http://localhost:8080/people
+Content-Type: application/json
+
+### retrieve one specified person by id
+GET http://localhost:8080/people/1
+Content-Type: application/json
+
+### retrieve all people with specified status
+GET http://localhost:8080/people?status=MARRIED
+Content-Type: application/json
+
+### add a new person
+POST http://localhost:8080/people
+Content-Type: application/json
+
+{
+  "name": "Jackie",
+  "age": 24,
+  "status": "SINGLE"
+}
+
+### update a person
+PUT http://localhost:8080/people/1
+Content-Type: application/json
+
+{
+  "name": "Antoinette",
+  "age": 44,
+  "status": "MARRIED"
+}
+
+### delete person
+DELETE http://localhost:8080/people/1
+Content-Type: application/json
+
+### re-seed database
+POST http://localhost:8080/people/seed
+Content-Type: application/json
+
+###
+
